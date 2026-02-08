@@ -269,6 +269,109 @@ Steps:
 - Marks boot disk as bootable  
 
 **Example**
+VMware Disk 1 (50 GB) → OpenStack Volume 1 (50 GB)
+VMware Disk 2 (100 GB) → OpenStack Volume 2 (100 GB)
+
+
+Volumes are empty initially.
+
+---
+
+### 6. Attach Volumes to v2v-helper Pod
+
+After creation:
+
+- Volumes attach to the pod  
+
+Example device mapping:
+
+/dev/vdb
+/dev/vdc
+
+
+---
+
+### 7. Disk Copy Begins (NBD — Critical Step)
+
+NBD streams disk data block-by-block.
+
+Mapping example:
+
+/dev/nbd0 → VMware disk
+/dev/vdb → OpenStack volume
+
+
+Copy logic:
+Read block from /dev/nbd0
+Write block to /dev/vdb
+Repeat until complete
+
+
+---
+
+### 8. Snapshot Handling
+
+Depends on migration type:
+
+#### Cold Migration
+
+- VM powered off  
+- Disk static  
+- Single full copy  
+
+#### Hot Migration
+
+- Snapshot created  
+- Initial full copy  
+- Incremental copies via CBT  
+- Final cutover sync  
+
+---
+
+### 9. OS Conversion (virt-v2v)
+
+After disk copy:
+
+virt-v2v performs:
+
+- Removes VMware Tools  
+- Installs VirtIO drivers  
+- Fixes bootloader  
+- Adjusts NIC configuration  
+
+---
+
+### 10. Create VM in OpenStack
+
+v2v-helper calls Nova:
+
+- Uses created volumes  
+- Attaches networks via `NetworkMapping`  
+- Assigns flavor  
+- Creates target VM  
+
+---
+
+### 11. Boot & Verification
+
+- Boots the VM  
+- Runs health checks  
+- Executes first-boot scripts  
+- Confirms VM readiness  
+
+---
+
+### 12. Status Reporting & Exit
+
+- Updates `MigrationPlan.status`  
+- Emits Kubernetes events  
+- Pod exits after completion  
+
+---
+
+## Pod Lifecycle
+
+Created → Running → Completed → Terminated
 
 
 
