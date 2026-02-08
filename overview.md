@@ -40,7 +40,7 @@ At a high level, the migration workflow operates as follows:
 - Recreates the VMs in OpenStack / PCD with mapped CPU, RAM, network, and storage configurations  
 - Automates the end-to-end migration workflow 
 
-[Module 01 - vJailbreak VM](module-01-appliance.md)
+[Module 01 - vJailbreak VM](vJailbreak Migration Architecture (Code-Level Understanding)/module-01-appliance.md)
 ---
 
 
