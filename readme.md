@@ -24,7 +24,6 @@ from VMware ESXi to an OpenStack environment. Rather than relying solely on docu
 	- Automates the migration flow.
 
 5. vjailbreak Migration Architecture (Code-Level Understanding)
-
   Modeule 01: Project orientation vjb VM
 	- vjailbreak is designed as a self-contained migration appliance. There is a QCOW2 image to deploy the appliance.
 	- It migrates VMs from VMware vCenter to OpenStack(KVM)
