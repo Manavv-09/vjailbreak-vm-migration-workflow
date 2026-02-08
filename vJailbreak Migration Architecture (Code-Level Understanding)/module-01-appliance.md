@@ -117,4 +117,5 @@ On first appliance boot:
 
 - Required for driver downloads  
 
+[Module 02 — v2v-helper](modules/module-02-v2v-helper.md)
 ---
