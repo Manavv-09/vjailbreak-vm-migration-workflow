@@ -117,5 +117,5 @@ On first appliance boot:
 
 - Required for driver downloads  
 
-[Module 02 — v2v-helper](vJailbreak Migration Architecture (Code-Level Understanding)/module-02-v2v-helper.md)
+[Module 02 — v2v-helper](module-02-v2v-helper.md)
 ---
