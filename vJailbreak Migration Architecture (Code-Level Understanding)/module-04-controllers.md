@@ -132,3 +132,4 @@ Progress updates are reflected in:
 - UI dashboards  
 
 ---
+[Module 05 — UI](module-05-ui.md)
