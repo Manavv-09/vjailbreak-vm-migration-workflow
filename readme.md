@@ -9,7 +9,7 @@
 vjailbreak is an open-source migration tool developed by Platform9.  
 It helps organizations migrate virtual machines from VMware environments to OpenStack-compatible clouds or PCD platforms with reduced complexity and downtime.
 
-It is often referred to as a “VMware escape tool” due to its role in enabling platform transitions.
+It is often referred to as a “VMware escape tool”.
 
 ---
 
