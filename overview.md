@@ -38,7 +38,7 @@ At a high level, the migration workflow operates as follows:
 - Allows selection of VMs to migrate  
 - Converts VMware disk formats (VMDK) into OpenStack-compatible formats such as QCOW2 or RAW  
 - Recreates the VMs in OpenStack / PCD with mapped CPU, RAM, network, and storage configurations  
-- Automates the end-to-end migration workflow  
+- Automates the end-to-end migration workflow 
 
 [Module 01 - vJailbreak VM](module-01-appliance.md)
 ---
