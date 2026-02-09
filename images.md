@@ -14,28 +14,26 @@
    ↓
 6. Creates v2v-helper Pod
    ↓
-7. Pod starts, runs v2v-helper/main.go
+7. Pod starts, runs v2v-helper - v2v-helper connects to VMware & OpenStack
    ↓
-8. v2v-helper connects to VMware & OpenStack
+8. Creates volumes, snapshots VM
    ↓
-9. Creates volumes, snapshots VM
-   ↓
-NBD server streams disk data
+9. NBD server streams disk data
     ↓
-11. Data copied to OpenStack volumes
+10. Data copied to OpenStack volumes
     ↓
-12. For hot migrations: Repeat changed blocks copy
+11. For hot migrations: Repeat changed blocks copy
     ↓
-13. Admin clicks cutover OR auto-cutover triggers
+12. Admin clicks cutover OR auto-cutover triggers
     ↓
-14. Final sync, power off source, convert disk
+13. Final sync, power off source, convert disk
     ↓
-15. Create target VM in OpenStack
+14. Create target VM in OpenStack
     ↓
-16. MigrationReconciler sees pod completed
+15. MigrationReconciler sees pod completed
     ↓
-18. Updates Migration status to "Succeeded"
+16. Updates Migration status to "Succeeded"
     ↓
-19. UI polls, shows success ✓
+17. UI polls, shows success ✓
 
 ---
