@@ -34,8 +34,8 @@ NBD server streams disk data
     ↓
 16. MigrationReconciler sees pod completed
     ↓
-
-    ---
 18. Updates Migration status to "Succeeded"
     ↓
 19. UI polls, shows success ✓
+
+---
