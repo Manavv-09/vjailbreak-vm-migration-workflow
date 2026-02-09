@@ -44,6 +44,10 @@ At a high level, the migration workflow operates as follows:
 ---
 
 
+<img width="2248" height="1464" alt="vjb" src="https://github.com/user-attachments/assets/039e0c92-fc16-4aa7-bc33-89dd0197b69f" />
+
+
+
 
 
 
