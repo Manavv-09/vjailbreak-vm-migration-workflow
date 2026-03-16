@@ -159,4 +159,4 @@ OpenStack API Issues Affecting Migration Speed:
  
 8. Time sync: 
 
-- Ensure vCenter, ESXi and vJailbreak clocks are in sync to avoid snapshot/CBT quirks. Although time sync doesn’t directly throttle data copy speed but it can delay scheduled steps in an ongoing migration, indirectly extending total time. 
+- Ensure vCenter, ESXi and vJailbreak clocks are in sync to avoid snapshot/CBT quirks. Although time sync doesn’t directly throttle data copy speed but it can delay scheduled steps in an ongoing migration, indirectly extending total time.
